@@ -1,0 +1,86 @@
+1789244952: mosquitto version 2.0.22 starting
+1789244952: Config loaded from /mosquitto/config/mosquitto.conf.
+1789244952: Opening ipv4 listen socket on port 1883.
+1789244952: mosquitto version 2.0.22 running
+1789245133: New connection from 127.0.0.1:59492 on port 1883.
+1789245133: New client connected from 127.0.0.1:59492 as auto-FAFEBC44-BF4D-5E52-E14B-D2CD7C09F162 (p2, c1, k60).
+1789245133: No will message specified.
+1789245133: Sending CONNACK to auto-FAFEBC44-BF4D-5E52-E14B-D2CD7C09F162 (0, 0)
+1789245133: Received SUBSCRIBE from auto-FAFEBC44-BF4D-5E52-E14B-D2CD7C09F162
+1789245133: 	iot/# (QoS 0)
+1789245133: auto-FAFEBC44-BF4D-5E52-E14B-D2CD7C09F162 0 iot/#
+1789245133: Sending SUBACK to auto-FAFEBC44-BF4D-5E52-E14B-D2CD7C09F162
+1789245190: New connection from 127.0.0.1:49708 on port 1883.
+1789245190: New client connected from 127.0.0.1:49708 as auto-4FDD9A4A-B947-76C0-9570-87E74988EB99 (p2, c1, k60).
+1789245190: No will message specified.
+1789245190: Sending CONNACK to auto-4FDD9A4A-B947-76C0-9570-87E74988EB99 (0, 0)
+1789245190: Received PUBLISH from auto-4FDD9A4A-B947-76C0-9570-87E74988EB99 (d0, q0, r0, m0, 'iot/test', ... (11 bytes))
+1789245190: Sending PUBLISH to auto-FAFEBC44-BF4D-5E52-E14B-D2CD7C09F162 (d0, q0, r0, m0, 'iot/test', ... (11 bytes))
+1789245190: Received DISCONNECT from auto-4FDD9A4A-B947-76C0-9570-87E74988EB99
+1789245190: Client auto-4FDD9A4A-B947-76C0-9570-87E74988EB99 disconnected.
+1789245194: Received PINGREQ from auto-FAFEBC44-BF4D-5E52-E14B-D2CD7C09F162
+1789245194: Sending PINGRESP to auto-FAFEBC44-BF4D-5E52-E14B-D2CD7C09F162
+1789245248: Received DISCONNECT from auto-FAFEBC44-BF4D-5E52-E14B-D2CD7C09F162
+1789245248: Client auto-FAFEBC44-BF4D-5E52-E14B-D2CD7C09F162 disconnected.
+1789245684: mosquitto version 2.0.22 terminating
+1789245684: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1789245706: mosquitto version 2.0.22 starting
+1789245706: Config loaded from /mosquitto/config/mosquitto.conf.
+1789245706: Warning: File /mosquitto/config/acl_file has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/config/acl_file`.
+1789245706: Opening ipv4 listen socket on port 1883.
+1789245706: mosquitto version 2.0.22 running
+1789245993: mosquitto version 2.0.22 terminating
+1789245993: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1789246007: mosquitto version 2.0.22 starting
+1789246007: Config loaded from /mosquitto/config/mosquitto.conf.
+1789246007: Warning: File /mosquitto/config/acl_file has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/config/acl_file`.
+1789246007: Opening ipv4 listen socket on port 1883.
+1789246007: mosquitto version 2.0.22 running
+1789246043: New connection from 127.0.0.1:47882 on port 1883.
+1789246043: Sending CONNACK to auto-475B65B3-5EF2-C1A5-73BC-66EA79E35279 (0, 5)
+1789246043: Client auto-475B65B3-5EF2-C1A5-73BC-66EA79E35279 disconnected, not authorised.
+1789246151: New connection from 127.0.0.1:34338 on port 1883.
+1789246151: New client connected from 127.0.0.1:34338 as auto-3E88FF1A-D186-3988-35A7-9E1F0739FBAC (p2, c1, k60, u'raspberry').
+1789246151: No will message specified.
+1789246151: Sending CONNACK to auto-3E88FF1A-D186-3988-35A7-9E1F0739FBAC (0, 0)
+1789246151: Received SUBSCRIBE from auto-3E88FF1A-D186-3988-35A7-9E1F0739FBAC
+1789246151: 	devices/raspberry/commands (QoS 0)
+1789246151: auto-3E88FF1A-D186-3988-35A7-9E1F0739FBAC 0 devices/raspberry/commands
+1789246151: Sending SUBACK to auto-3E88FF1A-D186-3988-35A7-9E1F0739FBAC
+1789246196: New connection from 127.0.0.1:47892 on port 1883.
+1789246196: Sending CONNACK to auto-568D02C8-D134-30BA-505E-CE3637BA704C (0, 5)
+1789246196: Client auto-568D02C8-D134-30BA-505E-CE3637BA704C disconnected, not authorised.
+1789246211: Received PINGREQ from auto-3E88FF1A-D186-3988-35A7-9E1F0739FBAC
+1789246211: Sending PINGRESP to auto-3E88FF1A-D186-3988-35A7-9E1F0739FBAC
+1789246234: New connection from 127.0.0.1:44140 on port 1883.
+1789246234: New client connected from 127.0.0.1:44140 as auto-DE56EAE2-794C-475F-6C80-99BA30373D95 (p2, c1, k60, u'backend').
+1789246234: No will message specified.
+1789246234: Sending CONNACK to auto-DE56EAE2-794C-475F-6C80-99BA30373D95 (0, 0)
+1789246234: Received PUBLISH from auto-DE56EAE2-794C-475F-6C80-99BA30373D95 (d0, q0, r0, m0, 'devices/raspberry/commands', ... (9 bytes))
+1789246234: Sending PUBLISH to auto-3E88FF1A-D186-3988-35A7-9E1F0739FBAC (d0, q0, r0, m0, 'devices/raspberry/commands', ... (9 bytes))
+1789246234: Received DISCONNECT from auto-DE56EAE2-794C-475F-6C80-99BA30373D95
+1789246234: Client auto-DE56EAE2-794C-475F-6C80-99BA30373D95 disconnected.
+1789246271: Received PINGREQ from auto-3E88FF1A-D186-3988-35A7-9E1F0739FBAC
+1789246271: Sending PINGRESP to auto-3E88FF1A-D186-3988-35A7-9E1F0739FBAC
+1789246332: Received PINGREQ from auto-3E88FF1A-D186-3988-35A7-9E1F0739FBAC
+1789246332: Sending PINGRESP to auto-3E88FF1A-D186-3988-35A7-9E1F0739FBAC
+1789246391: Received PINGREQ from auto-3E88FF1A-D186-3988-35A7-9E1F0739FBAC
+1789246391: Sending PINGRESP to auto-3E88FF1A-D186-3988-35A7-9E1F0739FBAC
+1789246452: Received PINGREQ from auto-3E88FF1A-D186-3988-35A7-9E1F0739FBAC
+1789246452: Sending PINGRESP to auto-3E88FF1A-D186-3988-35A7-9E1F0739FBAC
+1789246511: Received PINGREQ from auto-3E88FF1A-D186-3988-35A7-9E1F0739FBAC
+1789246511: Sending PINGRESP to auto-3E88FF1A-D186-3988-35A7-9E1F0739FBAC
+1789246571: Received PINGREQ from auto-3E88FF1A-D186-3988-35A7-9E1F0739FBAC
+1789246571: Sending PINGRESP to auto-3E88FF1A-D186-3988-35A7-9E1F0739FBAC
+1789246631: Received PINGREQ from auto-3E88FF1A-D186-3988-35A7-9E1F0739FBAC
+1789246631: Sending PINGRESP to auto-3E88FF1A-D186-3988-35A7-9E1F0739FBAC
+1789246691: Received PINGREQ from auto-3E88FF1A-D186-3988-35A7-9E1F0739FBAC
+1789246691: Sending PINGRESP to auto-3E88FF1A-D186-3988-35A7-9E1F0739FBAC
+1789246751: Received PINGREQ from auto-3E88FF1A-D186-3988-35A7-9E1F0739FBAC
+1789246751: Sending PINGRESP to auto-3E88FF1A-D186-3988-35A7-9E1F0739FBAC
+1789247192: Received PINGREQ from auto-3E88FF1A-D186-3988-35A7-9E1F0739FBAC
+1789247192: Sending PINGRESP to auto-3E88FF1A-D186-3988-35A7-9E1F0739FBAC
+1789247236: mosquitto version 2.0.22 terminating
+1789247236: Saving in-memory database to /mosquitto/data//mosquitto.db.

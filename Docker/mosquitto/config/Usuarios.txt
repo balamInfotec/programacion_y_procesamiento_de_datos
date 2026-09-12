@@ -1,0 +1,7 @@
+--- Raspberry ---
+Usuario: raspberry
+Password: raspberry_secret
+
+--- Back-end ---
+Usuario: backend
+Password: backend_secret

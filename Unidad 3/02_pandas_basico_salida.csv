@@ -1,0 +1,6 @@
+producto,categoria,precio,existencias,valor_inventario
+Cuaderno,Papeleria,45.5,20,910.0
+Pluma,Papeleria,12.0,80,960.0
+Mochila,Accesorios,380.0,12,4560.0
+Termo,Accesorios,250.0,15,3750.0
+Lapiz,Papeleria,8.5,100,850.0

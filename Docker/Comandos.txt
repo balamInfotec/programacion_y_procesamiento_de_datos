@@ -1,0 +1,180 @@
+# Levantar el contenedor
+# docker: ejecuta la herramienta de Docker.
+# compose: usa la configuración definida en docker-compose.yml.
+# up: crea e inicia los servicios definidos en el archivo.
+# -d: ejecuta los servicios en segundo plano (modo detached).
+docker compose up -d
+
+
+
+
+# Descargar la versión de Mosquitto indicada en docker-compose.yml.
+# pull: obtiene la imagen desde Docker Hub sin iniciar el contenedor.
+docker compose pull mosquitto
+
+
+
+
+# Validar el archivo docker-compose.yml sin iniciar contenedores
+# docker compose: ejecuta Docker Compose.
+# config: procesa y valida la configuración final del archivo YAML.
+docker compose config
+
+
+
+
+# Consultar el estado del servicio
+# ps: muestra los contenedores, su estado y los puertos publicados.
+docker compose ps
+
+
+
+
+# Ver logs:
+# logs: muestra los mensajes registrados por los contenedores.
+# -f: mantiene la salida abierta y muestra nuevos mensajes en tiempo real.
+# mosquitto: limita la consulta al servicio con ese nombre.
+docker compose logs -f mosquitto
+
+
+
+
+# Reiniciar el broker después de cambiar la configuración
+# restart: detiene y vuelve a iniciar el contenedor.
+# mosquitto: indica el servicio que se reiniciará.
+docker compose restart mosquitto
+
+
+
+
+# Detener el broker sin eliminar el contenedor
+# stop: detiene el contenedor, pero conserva su configuración y datos.
+# mosquitto: indica el servicio que se detendrá.
+docker compose stop mosquitto
+
+
+
+
+# Iniciar nuevamente un servicio detenido
+# start: inicia un contenedor que ya existe y estaba detenido.
+# mosquitto: indica el servicio que se iniciará.
+docker compose start mosquitto
+
+
+
+
+# Detener y eliminar los contenedores definidos en Compose
+# (no elimina las carpetas montadas en ./mosquitto)
+# down: detiene y elimina los contenedores y la red de Compose.
+docker compose down
+
+
+
+
+# Crear el archivo de contraseñas dentro de la carpeta de configuración.
+# El comando solicita la contraseña de forma interactiva.
+# exec: ejecuta un comando dentro de un contenedor en ejecución.
+# mosquitto: nombre del servicio donde se ejecutará el comando.
+# mosquitto_passwd: utilidad de Mosquitto para crear o modificar usuarios.
+# -c crea el archivo; úsalo solo la primera vez.
+# /mosquitto/config/password_file: ruta del archivo dentro del contenedor.
+# usuario: nombre de la cuenta que se agregará.
+docker compose exec mosquitto mosquitto_passwd -c /mosquitto/config/password_file usuario
+
+
+
+
+# Agregar o cambiar otro usuario sin -c para conservar los usuarios existentes.
+# /mosquitto/config/password_file: archivo que contiene los usuarios existentes.
+# otro_usuario: nombre de la cuenta que se agregará o actualizará.
+docker compose exec mosquitto mosquitto_passwd /mosquitto/config/password_file otro_usuario
+
+
+
+
+# Probar la suscripción a mosquitto
+# exec mosquitto: ejecuta mosquitto_sub dentro del contenedor del broker.
+# mosquitto_sub: cliente MQTT que escucha mensajes.
+# -t: especifica el tópico al que se suscribe.
+# iot/#: tópico iot y todos sus subniveles; # es un comodín MQTT.
+# -v: muestra el tópico junto con el mensaje recibido.
+docker compose exec mosquitto mosquitto_sub -t "iot/#" -v
+
+
+# Suscribirse usando autenticación.
+# -u: especifica el nombre del usuario creado con mosquitto_passwd.
+# -P: especifica la contraseña de ese usuario.
+# Reemplaza USUARIO y CONTRASENA por los valores reales.
+# En producción, evita guardar contraseñas directamente en archivos de comandos.
+docker compose exec mosquitto mosquitto_sub -u "USUARIO" -P "CONTRASENA" -t "iot/#" -v
+
+
+# Probar la publicación en mosquitto:
+# exec mosquitto: ejecuta mosquitto_pub dentro del contenedor del broker.
+# mosquitto_pub: cliente MQTT que publica un mensaje.
+# -t: especifica el tópico de destino.
+# iot/test: tópico usado para la prueba.
+# -m: indica el contenido del mensaje.
+docker compose exec mosquitto mosquitto_pub -t "iot/test" -m '{"value": 42}'
+
+
+
+# Publicar un mensaje usando autenticación.
+# -u: especifica el nombre del usuario creado con mosquitto_passwd.
+# -P: especifica la contraseña de ese usuario.
+# -t: indica el tópico de destino.
+# -m: indica el mensaje que se publicará.
+# Reemplaza USUARIO y CONTRASENA por los valores reales.
+# En producción, evita guardar contraseñas directamente en archivos de comandos.
+docker compose exec mosquitto mosquitto_pub -u "USUARIO" -P "CONTRASENA" -t "iot/test" -m '{"value": 42}'
+
+
+
+
+# Ver únicamente los contenedores que están actualmente en ejecución.
+# docker: ejecuta la herramienta de Docker.
+# ps: muestra los contenedores activos, sus nombres, imágenes y puertos.
+docker ps
+
+
+
+
+# Ver todos los contenedores, incluidos los que están detenidos.
+# -a: incluye todos los contenedores, no solo los que están ejecutándose.
+docker ps -a
+
+
+
+
+# Detener un contenedor de forma ordenada.
+# stop: solicita al proceso que termine antes de detenerlo.
+# NOMBRE_O_ID: reemplázalo por el nombre o identificador mostrado por docker ps -a.
+docker stop NOMBRE_O_ID
+
+
+
+
+# Eliminar un contenedor que ya está detenido.
+# rm: elimina el contenedor, pero no elimina su imagen.
+docker rm NOMBRE_O_ID
+
+
+
+
+# Detener y eliminar un contenedor en una sola operación.
+# -f: fuerza la detención si el contenedor está en ejecución y después lo elimina.
+# Úsalo con cuidado porque interrumpe el proceso inmediatamente.
+docker rm -f NOMBRE_O_ID
+
+
+
+
+# Verificar que el daemon de Docker está disponible y mostrar información
+# sobre el motor, contenedores, imágenes y configuración del entorno.
+docker info
+
+
+
+
+# Permite recrear el contenedor, en caso de aplicar cambios al archivo docker-compose.yml
+docker compose up -d --force-recreate mosquitto

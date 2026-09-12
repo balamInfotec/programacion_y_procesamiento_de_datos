@@ -1,0 +1,31 @@
+# services permiten definir y configurar múltiples contenedores que se ejecutarán juntos 
+# como parte de una aplicación. Cada servicio puede tener su propia configuración, incluyendo la 
+# imagen de Docker, puertos expuestos, volúmenes montados y políticas de reinicio.
+services:
+# permite definir un servicio llamado "mosquitto", que es un broker MQTT ligero y de código abierto.
+# se puede especificar otro nombre de servicio si se desea, pero "mosquitto" es descriptivo y fácil de entender.
+# El nombre del servicio permite que otros servicios dentro del mismo archivo docker-compose.yml se comuniquen 
+# con él usando este nombre como hostname.
+# Ejemplo: mqtt://mosquitto:1883 para conectarse al broker desde otro contenedor.
+# y también para ejecutar comandos como `docker-compose up mosquitto` para iniciar solo este servicio.
+# o docker-compose logs mosquitto para ver los logs de este servicio específico.
+  mosquitto:
+    # Version fija para evitar actualizaciones inesperadas en producción.
+    # image indica la imagen de Docker que se usará para el contenedor.
+    # La imagen oficial disponible usa la versión estable 2.0.22.
+    image: eclipse-mosquitto:2.0.22
+    # container_name establece un nombre específico para el contenedor, facilitando su identificación y gestión.
+    container_name: mosquitto-broker
+    # ports permite especificar qué puertos del contenedor se expondrán al host, permitiendo la comunicación con el exterior.
+    ports:
+      - "1883:1883"   # MQTT TCP
+      # - "9001:9001" # WebSockets (si lo habilitas en mosquitto.conf)
+    volumes:
+      # Izquierda: ruta local relativa a este docker-compose.yml.
+      # Derecha: ruta interna que utiliza el contenedor Mosquitto.
+      - ./mosquitto/config:/mosquitto/config
+      - ./mosquitto/data:/mosquitto/data
+      - ./mosquitto/log:/mosquitto/log
+    # restart define la política de reinicio del contenedor. "unless-stopped" significa que el contenedor 
+    # se reiniciará automáticamente (en caso de fallo) a menos que se detenga manualmente.
+    restart: unless-stopped

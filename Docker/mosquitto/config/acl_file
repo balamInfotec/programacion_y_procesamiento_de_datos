@@ -1,0 +1,21 @@
+# Dispositivo raspberry
+# user: inicia las reglas del usuario autenticado "raspberry".
+user raspberry
+
+# topic: define un permiso para un tópico MQTT.
+# write: permite publicar en devices/raspberry/values.
+topic write devices/raspberry/values
+
+# read: permite suscribirse y leer devices/raspberry/commands.
+topic read devices/raspberry/commands
+
+# Backend
+# user: inicia las reglas del usuario autenticado "backend".
+user backend
+
+# + es un comodín de un solo nivel: coincide con cualquier nombre de dispositivo.
+# read: permite al backend leer valores de cualquier dispositivo.
+topic read devices/+/values
+
+# write: permite al backend publicar comandos para cualquier dispositivo.
+topic write devices/+/commands
