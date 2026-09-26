@@ -84,3 +84,234 @@ To fix this, use `chmod 0700 /mosquitto/config/acl_file`.
 1789247192: Sending PINGRESP to auto-3E88FF1A-D186-3988-35A7-9E1F0739FBAC
 1789247236: mosquitto version 2.0.22 terminating
 1789247236: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1790385288: mosquitto version 2.0.22 starting
+1790385288: Config loaded from /mosquitto/config/mosquitto.conf.
+1790385288: Warning: File /mosquitto/config/acl_file has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/config/acl_file`.
+1790385288: Opening ipv4 listen socket on port 1883.
+1790385288: mosquitto version 2.0.22 running
+1790385372: New connection from 172.19.0.1:40608 on port 1883.
+1790385372: New client connected from 172.19.0.1:40608 as mqtt-explorer-88adc755 (p2, c1, k60, u'raspberry').
+1790385372: No will message specified.
+1790385372: Sending CONNACK to mqtt-explorer-88adc755 (0, 0)
+1790385372: Received SUBSCRIBE from mqtt-explorer-88adc755
+1790385372: 	# (QoS 0)
+1790385372: mqtt-explorer-88adc755 0 #
+1790385372: Sending SUBACK to mqtt-explorer-88adc755
+1790385372: Received SUBSCRIBE from mqtt-explorer-88adc755
+1790385372: 	$SYS/# (QoS 0)
+1790385372: mqtt-explorer-88adc755 0 $SYS/#
+1790385372: Sending SUBACK to mqtt-explorer-88adc755
+1790385384: Received DISCONNECT from mqtt-explorer-88adc755
+1790385384: Client mqtt-explorer-88adc755 disconnected.
+1790385391: New connection from 172.19.0.1:58946 on port 1883.
+1790385391: New client connected from 172.19.0.1:58946 as mqtt-explorer-88adc755 (p2, c1, k60, u'raspberry').
+1790385391: No will message specified.
+1790385391: Sending CONNACK to mqtt-explorer-88adc755 (0, 0)
+1790385391: Received SUBSCRIBE from mqtt-explorer-88adc755
+1790385391: 	# (QoS 0)
+1790385391: mqtt-explorer-88adc755 0 #
+1790385391: Sending SUBACK to mqtt-explorer-88adc755
+1790385391: Received SUBSCRIBE from mqtt-explorer-88adc755
+1790385391: 	$SYS/# (QoS 0)
+1790385391: mqtt-explorer-88adc755 0 $SYS/#
+1790385391: Sending SUBACK to mqtt-explorer-88adc755
+1790385393: Received DISCONNECT from mqtt-explorer-88adc755
+1790385393: Client mqtt-explorer-88adc755 disconnected.
+1790385402: New connection from 172.19.0.1:39614 on port 1883.
+1790385402: New client connected from 172.19.0.1:39614 as mqtt-explorer-88adc755 (p2, c1, k60, u'raspberry').
+1790385402: No will message specified.
+1790385402: Sending CONNACK to mqtt-explorer-88adc755 (0, 0)
+1790385402: Received SUBSCRIBE from mqtt-explorer-88adc755
+1790385402: 	# (QoS 0)
+1790385402: mqtt-explorer-88adc755 0 #
+1790385402: Sending SUBACK to mqtt-explorer-88adc755
+1790385402: Received SUBSCRIBE from mqtt-explorer-88adc755
+1790385402: 	$SYS/# (QoS 0)
+1790385402: mqtt-explorer-88adc755 0 $SYS/#
+1790385402: Sending SUBACK to mqtt-explorer-88adc755
+1790385404: Received DISCONNECT from mqtt-explorer-88adc755
+1790385404: Client mqtt-explorer-88adc755 disconnected.
+1790397673: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1790398444: New connection from 127.0.0.1:55114 on port 1883.
+1790398444: New client connected from 127.0.0.1:55114 as auto-C21306AB-0B58-323A-CE8F-BF0DF652B776 (p2, c1, k60, u'backend').
+1790398444: No will message specified.
+1790398444: Sending CONNACK to auto-C21306AB-0B58-323A-CE8F-BF0DF652B776 (0, 0)
+1790398444: Received SUBSCRIBE from auto-C21306AB-0B58-323A-CE8F-BF0DF652B776
+1790398444: 	devices/+/values (QoS 0)
+1790398444: auto-C21306AB-0B58-323A-CE8F-BF0DF652B776 0 devices/+/values
+1790398444: Sending SUBACK to auto-C21306AB-0B58-323A-CE8F-BF0DF652B776
+1790398467: New connection from 172.19.0.1:35498 on port 1883.
+1790398467: New client connected from 172.19.0.1:35498 as mqtt-explorer-88adc755 (p2, c1, k60, u'raspberry').
+1790398467: No will message specified.
+1790398467: Sending CONNACK to mqtt-explorer-88adc755 (0, 0)
+1790398467: Received SUBSCRIBE from mqtt-explorer-88adc755
+1790398467: 	# (QoS 0)
+1790398467: mqtt-explorer-88adc755 0 #
+1790398467: Sending SUBACK to mqtt-explorer-88adc755
+1790398467: Received SUBSCRIBE from mqtt-explorer-88adc755
+1790398467: 	$SYS/# (QoS 0)
+1790398467: mqtt-explorer-88adc755 0 $SYS/#
+1790398467: Sending SUBACK to mqtt-explorer-88adc755
+1790398473: Received PUBLISH from mqtt-explorer-88adc755 (d0, q0, r0, m0, 'devices/raspberry/values', ... (112 bytes))
+1790398473: Sending PUBLISH to auto-C21306AB-0B58-323A-CE8F-BF0DF652B776 (d0, q0, r0, m0, 'devices/raspberry/values', ... (112 bytes))
+1790398480: Received DISCONNECT from mqtt-explorer-88adc755
+1790398480: Client mqtt-explorer-88adc755 disconnected.
+1790398500: Received DISCONNECT from auto-C21306AB-0B58-323A-CE8F-BF0DF652B776
+1790398500: Client auto-C21306AB-0B58-323A-CE8F-BF0DF652B776 disconnected.
+1790399474: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1790401283: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1790433180: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1790433953: mosquitto version 2.0.22 terminating
+1790433953: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1790451866: mosquitto version 2.0.22 starting
+1790451866: Config loaded from /mosquitto/config/mosquitto.conf.
+1790451866: Warning: File /mosquitto/config/acl_file has world readable permissions. Future versions will refuse to load this file.
+To fix this, use `chmod 0700 /mosquitto/config/acl_file`.
+1790451866: Opening ipv4 listen socket on port 1883.
+1790451866: mosquitto version 2.0.22 running
+1790451880: New connection from 172.19.0.3:37201 on port 1883.
+1790451880: New client connected from 172.19.0.3:37201 as auto-4CA7B56E-240F-5206-6419-C757B726152C (p2, c1, k60, u'backend').
+1790451880: No will message specified.
+1790451880: Sending CONNACK to auto-4CA7B56E-240F-5206-6419-C757B726152C (0, 0)
+1790451880: Received SUBSCRIBE from auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790451880: 	devices/+/values (QoS 0)
+1790451880: auto-4CA7B56E-240F-5206-6419-C757B726152C 0 devices/+/values
+1790451880: Sending SUBACK to auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790451940: Received PINGREQ from auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790451940: Sending PINGRESP to auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790452000: Received PINGREQ from auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790452000: Sending PINGRESP to auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790452061: Received PINGREQ from auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790452061: Sending PINGRESP to auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790452121: Received PINGREQ from auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790452121: Sending PINGRESP to auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790452181: Received PINGREQ from auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790452181: Sending PINGRESP to auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790452241: Received PINGREQ from auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790452241: Sending PINGRESP to auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790452301: Received PINGREQ from auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790452301: Sending PINGRESP to auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790452315: New connection from 172.19.0.1:36424 on port 1883.
+1790452315: New client connected from 172.19.0.1:36424 as mqtt-explorer-88adc755 (p2, c1, k60, u'raspberry').
+1790452315: No will message specified.
+1790452315: Sending CONNACK to mqtt-explorer-88adc755 (0, 0)
+1790452315: Received SUBSCRIBE from mqtt-explorer-88adc755
+1790452315: 	# (QoS 0)
+1790452315: mqtt-explorer-88adc755 0 #
+1790452315: Sending SUBACK to mqtt-explorer-88adc755
+1790452315: Received SUBSCRIBE from mqtt-explorer-88adc755
+1790452315: 	$SYS/# (QoS 0)
+1790452315: mqtt-explorer-88adc755 0 $SYS/#
+1790452315: Sending SUBACK to mqtt-explorer-88adc755
+1790452361: Received PINGREQ from auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790452361: Sending PINGRESP to auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790452375: Received PINGREQ from mqtt-explorer-88adc755
+1790452375: Sending PINGRESP to mqtt-explorer-88adc755
+1790452376: Received PUBLISH from mqtt-explorer-88adc755 (d0, q0, r0, m0, 'devices/raspberry/values', ... (112 bytes))
+1790452376: Sending PUBLISH to auto-4CA7B56E-240F-5206-6419-C757B726152C (d0, q0, r0, m0, 'devices/raspberry/values', ... (112 bytes))
+1790452422: Received PINGREQ from auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790452422: Sending PINGRESP to auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790452436: Received PINGREQ from mqtt-explorer-88adc755
+1790452436: Sending PINGRESP to mqtt-explorer-88adc755
+1790452483: Received PINGREQ from auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790452483: Sending PINGRESP to auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790452496: Received PINGREQ from mqtt-explorer-88adc755
+1790452496: Sending PINGRESP to mqtt-explorer-88adc755
+1790452543: Received PINGREQ from auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790452543: Sending PINGRESP to auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790452556: Received PINGREQ from mqtt-explorer-88adc755
+1790452556: Sending PINGRESP to mqtt-explorer-88adc755
+1790452560: Received PUBLISH from mqtt-explorer-88adc755 (d0, q0, r0, m0, 'devices/raspberry/values', ... (112 bytes))
+1790452560: Sending PUBLISH to auto-4CA7B56E-240F-5206-6419-C757B726152C (d0, q0, r0, m0, 'devices/raspberry/values', ... (112 bytes))
+1790452603: Received PINGREQ from auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790452603: Sending PINGRESP to auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790452620: Received PINGREQ from mqtt-explorer-88adc755
+1790452620: Sending PINGRESP to mqtt-explorer-88adc755
+1790452663: Received PINGREQ from auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790452663: Sending PINGRESP to auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790452665: Received PUBLISH from auto-4CA7B56E-240F-5206-6419-C757B726152C (d0, q0, r0, m0, 'devices/raspberry/commands', ... (2 bytes))
+1790452665: Sending PUBLISH to mqtt-explorer-88adc755 (d0, q0, r0, m0, 'devices/raspberry/commands', ... (2 bytes))
+1790452680: Received PINGREQ from mqtt-explorer-88adc755
+1790452680: Sending PINGRESP to mqtt-explorer-88adc755
+1790452724: Received PINGREQ from auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790452724: Sending PINGRESP to auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790452731: Received PUBLISH from mqtt-explorer-88adc755 (d0, q0, r0, m0, 'devices/raspberry/values', ... (113 bytes))
+1790452731: Sending PUBLISH to auto-4CA7B56E-240F-5206-6419-C757B726152C (d0, q0, r0, m0, 'devices/raspberry/values', ... (113 bytes))
+1790452765: Received PUBLISH from mqtt-explorer-88adc755 (d0, q0, r0, m0, 'devices/raspberry/values', ... (112 bytes))
+1790452765: Sending PUBLISH to auto-4CA7B56E-240F-5206-6419-C757B726152C (d0, q0, r0, m0, 'devices/raspberry/values', ... (112 bytes))
+1790452785: Received PINGREQ from auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790452785: Sending PINGRESP to auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790452820: Received PUBLISH from auto-4CA7B56E-240F-5206-6419-C757B726152C (d0, q0, r0, m0, 'devices/raspberry/commands', ... (3 bytes))
+1790452820: Sending PUBLISH to mqtt-explorer-88adc755 (d0, q0, r0, m0, 'devices/raspberry/commands', ... (3 bytes))
+1790452825: Received PINGREQ from mqtt-explorer-88adc755
+1790452825: Sending PINGRESP to mqtt-explorer-88adc755
+1790452845: Received PINGREQ from auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790452845: Sending PINGRESP to auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790452885: Received PINGREQ from mqtt-explorer-88adc755
+1790452885: Sending PINGRESP to mqtt-explorer-88adc755
+1790452906: Received PINGREQ from auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790452906: Sending PINGRESP to auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790452945: Received PINGREQ from mqtt-explorer-88adc755
+1790452945: Sending PINGRESP to mqtt-explorer-88adc755
+1790452966: Received PINGREQ from auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790452966: Sending PINGRESP to auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790453004: Received PINGREQ from mqtt-explorer-88adc755
+1790453004: Sending PINGRESP to mqtt-explorer-88adc755
+1790453026: Received PINGREQ from auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790453026: Sending PINGRESP to auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790453065: Received PINGREQ from mqtt-explorer-88adc755
+1790453065: Sending PINGRESP to mqtt-explorer-88adc755
+1790453087: Received PINGREQ from auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790453087: Sending PINGRESP to auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790453125: Received PINGREQ from mqtt-explorer-88adc755
+1790453125: Sending PINGRESP to mqtt-explorer-88adc755
+1790453147: Received PINGREQ from auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790453147: Sending PINGRESP to auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790453184: Received PINGREQ from mqtt-explorer-88adc755
+1790453184: Sending PINGRESP to mqtt-explorer-88adc755
+1790453207: Received PINGREQ from auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790453207: Sending PINGRESP to auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790453245: Received PINGREQ from mqtt-explorer-88adc755
+1790453245: Sending PINGRESP to mqtt-explorer-88adc755
+1790453267: Received PINGREQ from auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790453267: Sending PINGRESP to auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790453305: Received PINGREQ from mqtt-explorer-88adc755
+1790453305: Sending PINGRESP to mqtt-explorer-88adc755
+1790453328: Received PINGREQ from auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790453328: Sending PINGRESP to auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790453365: Received PINGREQ from mqtt-explorer-88adc755
+1790453365: Sending PINGRESP to mqtt-explorer-88adc755
+1790453388: Received PINGREQ from auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790453388: Sending PINGRESP to auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790453425: Received PINGREQ from mqtt-explorer-88adc755
+1790453425: Sending PINGRESP to mqtt-explorer-88adc755
+1790453448: Received PINGREQ from auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790453448: Sending PINGRESP to auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790453485: Received PINGREQ from mqtt-explorer-88adc755
+1790453485: Sending PINGRESP to mqtt-explorer-88adc755
+1790453509: Received PINGREQ from auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790453509: Sending PINGRESP to auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790453545: Received PINGREQ from mqtt-explorer-88adc755
+1790453545: Sending PINGRESP to mqtt-explorer-88adc755
+1790453569: Received PINGREQ from auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790453569: Sending PINGRESP to auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790453605: Received PINGREQ from mqtt-explorer-88adc755
+1790453605: Sending PINGRESP to mqtt-explorer-88adc755
+1790453629: Received PINGREQ from auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790453629: Sending PINGRESP to auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790453665: Received PINGREQ from mqtt-explorer-88adc755
+1790453665: Sending PINGRESP to mqtt-explorer-88adc755
+1790453667: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1790453690: Received PINGREQ from auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790453690: Sending PINGRESP to auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790453725: Received PINGREQ from mqtt-explorer-88adc755
+1790453725: Sending PINGRESP to mqtt-explorer-88adc755
+1790453750: Received PINGREQ from auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790453750: Sending PINGRESP to auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790453785: Received PINGREQ from mqtt-explorer-88adc755
+1790453785: Sending PINGRESP to mqtt-explorer-88adc755
+1790453810: Received PINGREQ from auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790453810: Sending PINGRESP to auto-4CA7B56E-240F-5206-6419-C757B726152C
+1790453811: Received DISCONNECT from mqtt-explorer-88adc755
+1790453811: Client mqtt-explorer-88adc755 disconnected.

@@ -29,3 +29,24 @@ services:
     # restart define la política de reinicio del contenedor. "unless-stopped" significa que el contenedor 
     # se reiniciará automáticamente (en caso de fallo) a menos que se detenga manualmente.
     restart: unless-stopped
+
+  # Servicio que ejecuta el backend desarrollado con FastAPI.
+  backend:
+    # Construye la imagen usando el Dockerfile ubicado en ./backend.
+    build: ./backend
+    # Asigna un nombre fijo al contenedor del backend.
+    container_name: fastapi-backend
+    # Publica puertos del backend en el equipo anfitrión.
+    ports:
+      # Mapea el puerto 8000 del equipo al puerto 8000 del contenedor.
+      - "8000:8000"
+    # Carga variables de entorno desde un archivo externo.
+    env_file:
+      # Ruta del archivo .env relativa a la ubicación de este compose.
+      - ./backend/.env
+    # Define servicios que deben iniciarse antes que el backend.
+    depends_on:
+      # Inicia el contenedor de Mosquitto antes de iniciar el backend.
+      - mosquitto
+    # Reinicia el backend automáticamente, excepto si se detiene manualmente.
+    restart: unless-stopped

@@ -1,0 +1,6 @@
+fastapi
+uvicorn[standard]
+paho-mqtt
+pydantic
+pydantic-settings
+python-dotenv
