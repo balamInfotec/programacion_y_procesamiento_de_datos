@@ -1,0 +1,130 @@
+1️⃣ Inicializar el proyecto React + Vite
+
+En tu terminal, dentro de la carpeta docker/frontend/, ejecuta:
+
+npm create vite@latest .
+
+
+Cuando te pregunte:
+
+Project name → ya estás en la carpeta correcta, así que usa .
+
+Framework → React
+
+Variant → JavaScript (o TypeScript si lo prefieres)
+
+2️⃣ Instalar dependencias
+
+Dentro de docker/frontend/:
+
+npm install
+
+3️⃣ Ajustar vite.config.js para Docker
+Este ajuste es crítico para que el frontend funcione dentro del contenedor.
+
+Abre vite.config.js y reemplaza su contenido por esto:
+
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
+export default defineConfig({
+  plugins: [react()],
+  server: {
+    host: true,     // Permite que el contenedor exponga el servidor
+    port: 5173      // Puerto estándar de Vite
+  }
+})
+
+
+¿Por qué es necesario host: true?
+Porque dentro de Docker, Vite debe escuchar en 0.0.0.0, no en localhost.
+Esto permite que el contenedor exponga el servidor correctamente.
+
+4️⃣ Crear un archivo de conexión WebSocket (mínimo funcional)
+Vamos a crear un archivo que te permita probar la conexión con tu backend FastAPI.
+
+En:
+
+frontend/src/ws.js
+
+Coloca:
+
+export function connectWS() {
+  const ws = new WebSocket("ws://backend:8000/ws");
+
+  ws.onopen = () => {
+    console.log("WebSocket conectado");
+  };
+
+  ws.onmessage = (event) => {
+    console.log("Mensaje recibido:", event.data);
+  };
+
+  ws.onerror = (err) => {
+    console.error("Error en WebSocket:", err);
+  };
+
+  ws.onclose = () => {
+    console.log("WebSocket cerrado");
+  };
+
+  return ws;
+}
+
+
+Nota importante:
+Dentro de Docker, el backend se llama backend, porque ese es el nombre del servicio en docker-compose.yml.
+
+Por eso la URL es:
+
+ws://backend:8000/ws
+
+
+Instalar tailwind
+
+🧱 6. Instalación de TailwindCSS (punto A)
+Ejecuta dentro de frontend/:
+
+cd frontend
+npm install -D @tailwindcss/vite
+
+
+Esto genera:
+
+tailwind.config.js
+
+postcss.config.js
+
+🧱 7. Configurar Tailwind
+Edita tailwind.config.js:
+
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,jsx}"
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+🧱 8. Activar Tailwind en tu CSS global
+Edita src/index.css:
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+🧱 9. Probar Tailwind
+Edita App.jsx temporalmente:
+
+export default function App() {
+  return (
+    <div className="p-6 bg-gray-900 text-white">
+      <h1 className="text-3xl font-bold">Dashboard IoT</h1>
+      <p className="mt-2">Tailwind funcionando</p>
+    </div>
+  );
+}
+
